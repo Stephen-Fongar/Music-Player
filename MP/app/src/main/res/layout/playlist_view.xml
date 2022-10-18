@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/playlistImg"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="12dp"
+        android:src="@drawable/music_photo"
+        android:contentDescription="@string/song_img"/>
+
+    <LinearLayout
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:backgroundTint="@android:color/transparent">
+        <ImageButton
+            android:backgroundTint="@android:color/transparent"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+/>
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="121dp">
+            <TextView
+                android:id="@+id/playlistName"
+                android:layout_width="132dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:contentDescription="@string/playlist_name"
+                android:ellipsize="marquee"
+                android:layout_marginStart="7dp"
+                android:fadingEdge="horizontal"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/playlist_name"
+                android:textSize="18sp" />
+        </ScrollView>
+        <ImageButton
+            android:id="@+id/playlistDeleteBtn"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:padding="28dp"
+            android:layout_gravity="center"
+
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/delete_icon" />
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

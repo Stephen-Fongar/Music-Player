@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaylistDetails">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtnPD"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/back_btn"
+            android:src="@drawable/arrow_back_icon"
+            app:tint="@color/black"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/playlistNamePD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/playlist_btn"
+            android:gravity="center"
+            android:text="@string/playlist_btn"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/myBlue"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        android:layout_marginTop="10dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/playlistImgPD"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/music_photo"/>
+        <TextView
+            android:id="@+id/moreInfoPD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/playlist_name"
+            android:gravity="center|start"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+            
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playlistDetailsRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutDetails"
+        android:scrollbars="vertical"
+        android:paddingBottom="310dp"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/shuffleBtnPD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/shuffle_icon"
+        app:iconSize="35dp"
+        app:iconTint="@color/myBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.957"
+        app:strokeWidth="3dp"
+        app:strokeColor="@color/myBlue"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/addBtnPD"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/add_song"
+            android:drawableLeft="@drawable/add_icon_blue"
+            android:text="@string/add_song"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:tint="@color/black" />
+
+        <Button
+            android:id="@+id/removeAllPD"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/remove_all"
+            android:drawableLeft="@drawable/remove_icon_blue"
+            android:text="@string/remove_all"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:tint="@color/black" />
+        <!--                    <Button-->
+        <!--                        android:id="@+id/queBtnMain"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:contentDescription="@string/play_next_btn"-->
+        <!--                        app:tint="@color/black"-->
+        <!--                        style="@style/Widget.AppCompat.Button.Borderless"-->
+        <!--                        android:drawableTop="@drawable/play_next_icon"-->
+        <!--                        android:text="@string/play_next_btn"-->
+        <!--                        android:textColor="@color/black"-->
+        <!--                        android:textAllCaps="false"/>-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

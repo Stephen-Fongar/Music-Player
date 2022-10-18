@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NowPlaying"
+    android:background="@color/grayNow">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/songImgnNP"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="5dp"
+                android:src="@drawable/music_photo"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="150dp"
+            android:orientation="vertical">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+                <TextView
+                    android:id="@+id/songNameNP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/song_name"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"/>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/artistNameNP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/artist_name"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="16dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/prevBtnNP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/prev_icon"
+                android:contentDescription="@string/previous_btn"
+                android:background="@color/grayNow"
+                app:tint="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/playPauseBtnNP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play_icon_white"
+                android:contentDescription="@string/play_btn"
+                android:background="@color/grayNow" />
+            <ImageButton
+                android:id="@+id/nextBtnNP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/next_icon"
+                android:contentDescription="@string/next_btn"
+                android:background="@color/grayNow"
+                app:tint="@color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MP</string>
+
+    <string name="shuffle_btn">Shuffle</string>
+    <string name="favourites_btn">Favourites</string>
+    <string name="playlist_btn">Playlists</string>
+    <string name="que_btn">Que</string>
+    <string name="Que_playlist_btn">Que Playlist</string>
+    <string name="loop_song_btn">Loop Song</string>
+    <string name="back_btn">Back</string>
+    <string name="more_btn">More</string>
+    <string name="play_btn">Play</string>
+    <string name="previous_btn">Previous</string>
+    <string name="next_btn">Next</string>
+    <string name="eq_btn">EQ</string>
+
+    <string name="total_files">Total Files</string>
+    <string name="song_name">Song Name</string>
+    <string name="artist_name">Artist Name</string>
+
+    <string name="start_tv">00:00</string>
+    <string name="end_tv">Loading...</string>
+
+    <string name="play_next_btn">Play Next</string>
+    <string name="search_view">Search View</string>
+    <string name="song_img">Song Image</string>
+    <string name="playlist_name">Playlist Name</string>
+    <string name="playlist_delete">Delete</string>
+    <string name="user_name">Your Name</string>
+
+    <string name="add_song">Add</string>
+    <string name="remove_all">Remove All</string>
+
+    <string name="search_song">Search Song</string>
+</resources>
